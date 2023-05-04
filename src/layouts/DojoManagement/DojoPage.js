@@ -1,8 +1,9 @@
 import React from 'react'
+import DojoLayout from './DojoLayout'
 
 const DojoPage = () => {
   return (
-    <div>DojoPage</div>
+    <DojoLayout />
   )
 }
 
