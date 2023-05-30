@@ -3,6 +3,7 @@ import { AppBar, IconButton, Tab, Tabs, Toolbar, Typography, Grid, Box, Button, 
 import SportsKabaddiIcon from '@mui/icons-material/SportsKabaddi';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-router-dom';
+import './../Navbar/local.css'
 
 const mainMenu = [{ key: 'home', value: 'Kezdőlap' },
 { key: 'about-us', value: 'Rólunk' },
@@ -32,9 +33,9 @@ const Navbar = () => {
                 <Grid sx={{ placeItems: 'center' }} container spacing={1}>
                     <Grid item xs={2}>
                         <Link to='home'>
-                        <IconButton>
-                            <SportsKabaddiIcon sx={{ color: 'white' }} />
-                        </IconButton>
+                            <IconButton>
+                                <SportsKabaddiIcon sx={{ color: 'white' }} />
+                            </IconButton>
                         </Link>
                     </Grid>
                     <Grid item xs={6}>
@@ -43,13 +44,13 @@ const Navbar = () => {
                             onChange={(e, val) => setValue(val)}
                             sx={{ ml: 'auto', textDecoration: 'none', /*'button:hover': { backgroundColor: 'green' }*/ }}
                             TabIndicatorProps={{ sx: { backgroundColor: 'white' } }}
-                            textColor='red'
+                            textColor='white'
                         >
                             {mainMenu.map((link) => (
                                 <Tab
                                     LinkComponent={Link} to={`${link.key}`}
                                     sx={{
-                                        textDecoration: 'none', ':hover': {
+                                        textDecoration: '', ':hover': {
                                             textDecoration: 'underline',
                                             textUnderlineOffset: '10px',
                                             // bgcolor: 'red'
@@ -57,7 +58,7 @@ const Navbar = () => {
                                     }}
                                     key={link} label={link.value} />
                             ))}
-                            {/* <Divider variant='middle' orientation='vertical' flexItem sx={{ color: 'white', bgcolor: 'white'}}/> */}
+                            <Divider variant='middle' orientation='vertical' flexItem sx={{ color: 'white', bgcolor: 'white' }} />
                             <Tab
                                 sx={{
                                     color: 'white',
@@ -79,6 +80,7 @@ const Navbar = () => {
                             >
                                 {dojoSubMenu.map((link) => (
                                     <MenuItem
+                                        LinkComponent={Link} to='dojo'
                                         onClick={handleClose}
                                         sx={{
                                             textDecoration: 'none', ':hover': {
@@ -86,7 +88,10 @@ const Navbar = () => {
                                             }
                                         }}
                                     >
-                                        {link.value}</MenuItem>
+                                        <Link to='dojo'>
+                                        {link.value}
+                                        </Link>
+                                        </MenuItem>
                                 ))}
                             </Menu>
                         </Tabs>

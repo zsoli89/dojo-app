@@ -22,7 +22,7 @@ const CarouselComp = () => {
             style={{
                 "--swiper-navigation-color": "#fff",
                 "--swiper-pagination-color": "#fff",
-                paddingTop:1
+                paddingTop: 1
             }}
             navigation
             loop

@@ -1,9 +1,7 @@
 import React from 'react'
 
-const DojoContent = () => {
+export const DojoContent = () => {
   return (
     <div>DojoContent</div>
   )
 }
-
-export default DojoContent
