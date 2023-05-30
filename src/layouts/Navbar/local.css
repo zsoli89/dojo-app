@@ -1,8 +1,15 @@
-a {
+a.menu {
     text-decoration: none;
 
-    color: black;
+    color: rgb(0, 0, 0);
 }
+
+a.loginMenu {
+    text-decoration: none;
+
+    color: white;
+}
+
 
 ul {
     background-color: lightgray;

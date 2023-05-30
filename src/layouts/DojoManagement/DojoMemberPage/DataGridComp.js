@@ -1,6 +1,7 @@
 import React from 'react'
 import { Typography, Box, Button, Grid } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid';
+import './../DojoMemberPage/local.css'
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 90 },
@@ -67,32 +68,38 @@ const rows = [
 const DataGridComp = () => {
     return (
         // <Grid container rowSpacing={1}>
-        <Box sx={{ height: '100%', width: '100%', bgcolor: 'rgba(243, 236, 250, 0.8)', boxShadow: '5px 5px 5px #ccc' }}>
+        <Box sx={{ padding: 2, bgcolor: 'rgba(243, 236, 250, 0.8)', width: '100%' }}>
             {/* <Box alignItems={'center'} justifyContent='center'> */}
-            <Box sx={{ flexDirection: 'column', justifyContent: 'center', alignContent: 'center' }}>
-                <div className='flexGrid'>
-                    <Grid item xs={12} >
-                        <Typography variant='subtitle1' sx={{ color: 'red', margin: 2 }}>DataGrid Component</Typography>
-                        <DataGrid
-                            sx={{ bgcolor: 'white', width: '95%', position: 'unset' }}
-                            onCellEditStop={(params) => console.log(params)}
-                            rows={rows}
-                            columns={columns}
-                            initialState={{
-                                pagination: {
-                                    paginationModel: {
-                                        pageSize: 8,
-                                    },
+            {/* <Box display={'flex'} justifyContent={'center'} alignItems={'flex-start'} sx={{ boxShadow: '5px 5px 5px #ccc' }}> */}
+            <div className='gridClass'>
+                <Grid item xs={12} >
+                    <Typography variant='subtitle1' sx={{ margin: 2, fontWeight: 'bold', fontSize: '20px' }}>Mátra Kempo SE Tagok</Typography>
+                    <div className='dataGrid'>
+                    <DataGrid
+                        sx={{ bgcolor: 'white', width: '100%', position: 'unset', borderRadius: 2 }}
+                        onCellEditStop={(params) => console.log(params)}
+                        rows={rows}
+                        columns={columns}
+                        initialState={{
+                            pagination: {
+                                paginationModel: {
+                                    pageSize: 8,
                                 },
-                            }}
-                            pageSizeOptions={[15]}
-                            // checkboxSelection
-                            disableRowSelectionOnClick
-                        />
-                        <Button variant='contained'>Megnyitás</Button>
-                    </Grid>
-                </div>
-            </Box>
+                            },
+                        }}
+                        pageSizeOptions={[15]}
+                        // checkboxSelection
+                        disableRowSelectionOnClick
+                    />
+                    </div>
+                    <Button
+                        variant='contained'
+                        sx={{ mt: 1 }}
+                    >
+                        Megnyitás</Button>
+                </Grid>
+            </div>
+            {/* </Box> */}
             {/* </Grid> */}
 
         </Box>

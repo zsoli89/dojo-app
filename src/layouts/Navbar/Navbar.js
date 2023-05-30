@@ -88,10 +88,10 @@ const Navbar = () => {
                                             }
                                         }}
                                     >
-                                        <Link to='dojo'>
-                                        {link.value}
+                                        <Link to='dojo' className='menu'>
+                                            {link.value}
                                         </Link>
-                                        </MenuItem>
+                                    </MenuItem>
                                 ))}
                             </Menu>
                         </Tabs>
@@ -99,7 +99,14 @@ const Navbar = () => {
                     <Grid item xs={1} />
                     <Grid item xs={3}>
                         <Box display={'flex'}>
-                            <Button sx={{ marginLeft: 'auto', background: 'rgba(180,58,58,1)', ':hover': { bgcolor: 'grey' } }} variant='contained'>Bejelentkezés</Button>
+                            <Button
+                                sx={{ marginLeft: 'auto', background: 'rgba(180,58,58,1)', ':hover': { bgcolor: 'grey' } }}
+                                variant='contained'
+                            >
+                                <Link to='auth' className='loginMenu'>
+                                    Bejelentkezés
+                                </Link>
+                            </Button>
                         </Box>
                     </Grid>
                 </Grid>
