@@ -1,34 +1,34 @@
 import React, { useState } from 'react'
-import {  Grid, List, ListItemButton, ListItemIcon, ListItemText, Divider } from '@mui/material'
-import { DojoCardComp } from './DojoCardComp';
-import { DojoContent } from './DojoContent';
-import DojoBlogComp from './DojoBlogComp';
-import DataGridComp from './DojoMemberPage/DataGridComp';
-import TestCarouselComp from '../Homepage/TestCarouselComp';
+import { Grid, List, ListItemButton, ListItemIcon, ListItemText, Divider } from '@mui/material'
+import MemberCardComp from './MemberCardComp';
+import PersonalData from './PersonalData';
+import Address from './Address';
+import Contact from './Contact';
+import BeltExam from './BeltExam';
 
-const DojoLayout = () => {
+const DojoMemberPage = () => {
 
-    const [blogOpen, setBlogOpen] = useState(true);
-    const [baseInfoOpen, setBaseInfoOpen] = useState(false);
-    const [memberOpen, setmemberOpen] = useState(false);
-    const [testMaterialOpen, settestMaterialOpen] = useState(false);
+    const [personalDataOpen, setPersonalDataOpen] = useState(true);
+    const [addressOpen, setAddressOpen] = useState(false);
+    const [contactOpen, setContactOpen] = useState(false);
+    const [beltExamOpen, setBeltExamOpen] = useState(false);
 
     const [active, setActive] = useState(0);
     const handleClick = () => {
         setActive(!active);
     };
-    const handleLeftSideClick = (setBlog, setBaseInfo, setMember, setTestMaterial, setActiveNumber) => {
-        setBlogOpen(setBlog);
-        setBaseInfoOpen(setBaseInfo);
-        setmemberOpen(setMember);
-        settestMaterialOpen(setTestMaterial);
+    const handleLeftSideClick = (setPersonalData, setAddress, setContact, setBeltExam, setActiveNumber) => {
+        setPersonalDataOpen(setPersonalData);
+        setAddressOpen(setAddress);
+        setContactOpen(setContact);
+        setBeltExamOpen(setBeltExam);
         setActive(setActiveNumber);
     }
 
     return (
         <Grid sx={{ placeItems: 'top' }} container spacing={0}>
             <Grid item xs={2} sx={{ marginTop: 0.5, marginLeft: 0.5 }}>
-                <DojoCardComp />
+                <MemberCardComp />
                 <List sx={{ width: '100%', bgcolor: 'white' }}
                     component="nav">
                     <ListItemButton onClick={() =>
@@ -36,7 +36,7 @@ const DojoLayout = () => {
                     }
                         style={{ backgroundColor: active === 0 ? 'lightgray' : 'white' }} >
                         <ListItemIcon>
-                            <ListItemText sx={{ color: 'black' }}>Blog</ListItemText>
+                            <ListItemText sx={{ color: 'black' }}>Személyes adatok</ListItemText>
                         </ListItemIcon>
                     </ListItemButton >
                     <Divider />
@@ -46,7 +46,7 @@ const DojoLayout = () => {
                     }
                         style={{ backgroundColor: active === 1 ? 'lightgray' : 'white' }} >
                         <ListItemIcon>
-                            <ListItemText sx={{ color: 'black' }}>Alapadatok</ListItemText>
+                            <ListItemText sx={{ color: 'black' }}>Lakcím</ListItemText>
                         </ListItemIcon>
                     </ListItemButton>
                     <Divider />
@@ -56,7 +56,7 @@ const DojoLayout = () => {
                     }
                         style={{ backgroundColor: active === 2 ? 'lightgray' : 'white' }} >
                         <ListItemIcon>
-                            <ListItemText sx={{ color: 'black' }}>Tagok</ListItemText>
+                            <ListItemText sx={{ color: 'black' }}>Kontakt</ListItemText>
                         </ListItemIcon>
                     </ListItemButton>
                     <Divider />
@@ -73,10 +73,10 @@ const DojoLayout = () => {
             </Grid>
             {/*sx={{ marginTop: 0.5, bgcolor: 'rgba(243, 236, 250, 0.8)', height: '650px' }} */}
             <Grid item xs={9.8} >
-                {blogOpen && <DojoBlogComp />}
-                {baseInfoOpen && <DojoContent />}
-                {memberOpen && <DataGridComp />}
-                {testMaterialOpen && <TestCarouselComp />}
+                {personalDataOpen && <PersonalData />}
+                {addressOpen && <Address />}
+                {contactOpen && <Contact />}
+                {beltExamOpen && <BeltExam />}
             </Grid>
             {/*             <Grid item xs={1.5} sx={{ marginTop: 0.5 }}>
                 <Button fullWidth sx={{ bgcolor: 'purple' }}></Button>
@@ -85,4 +85,4 @@ const DojoLayout = () => {
     )
 }
 
-export default DojoLayout
+export default DojoMemberPage

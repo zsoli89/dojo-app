@@ -2,7 +2,7 @@ import AboutUsPage from './layouts/AboutUsPage/AboutUsPage';
 import Auth from './layouts/AuthPage/Auth';
 import Contact from './layouts/ContactPage/Contact';
 import DojoManagementPage from './layouts/DojoManagement/DojoManagementPage';
-import DojoPage from './layouts/DojoManagement/DojoPage';
+import DojoMemberPage from './layouts/DojoMemberPage/DojoMemberPage';
 import AddMainBlog from './layouts/Homepage/AddMainBlog';
 import Homepage from './layouts/Homepage/Homepage';
 import Navbar from './layouts/Navbar/Navbar';
@@ -36,6 +36,9 @@ function App() {
                 </Route>
                 <Route path='/auth'>
                     <Auth />
+                </Route>
+                <Route path='/tagok'>
+                    <DojoMemberPage />
                 </Route>
             </Switch>
             {/* </section> */}

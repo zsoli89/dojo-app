@@ -5,9 +5,12 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Link } from 'react-router-dom';
 import './../Navbar/local.css'
 
-const mainMenu = [{ key: 'home', value: 'Kezdőlap' },
-{ key: 'about-us', value: 'Rólunk' },
-{ key: 'contact', value: 'Kapcsolat' }];
+const mainMenu = [
+    { key: 'home', value: 'Kezdőlap' },
+    { key: 'about-us', value: 'Rólunk' },
+    { key: 'contact', value: 'Kapcsolat' },
+    { key: 'tagok', value: 'Tagok' }
+];
 
 const dojoSubMenu = [
     { key: 'matra', value: 'Mátra Kempo SE' },

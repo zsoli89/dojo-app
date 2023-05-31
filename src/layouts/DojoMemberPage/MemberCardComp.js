@@ -1,21 +1,12 @@
 import React from 'react'
-import { Card, CardContent, Typography, Box, Divider } from '@mui/material'
+import { Card, CardContent, Divider, Typography } from '@mui/material'
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
-
-export const DojoCardComp = () => {
-    return (
-        <Card sx={{ width: '98%', borderColor: 'red', borderRadius: '10px', border: 'solid', borderWidth:'0.5px', boxShadow: '5px 5px 10px #ccc', marginBottom: 0.5 }}>
+const MemberCardComp = () => {
+  return (
+    <Card sx={{ width: '98%', borderColor: 'red', borderRadius: '10px', border: 'solid', borderWidth:'0.5px', boxShadow: '5px 5px 10px #ccc', marginBottom: 0.5 }}>
             <CardContent>
                 <Typography align='center' sx={{ fontSize: 20 }} gutterBottom>
-                    Dojo adatlapja
+                    Jakab Zoltán adatlapja
                 </Typography>
                 <Typography align='center' sx={{ marginBottom:3 }} variant="h5" component="div" gutterBottom>
                     {/* be{bull}nev{bull}o{bull}lent */}
@@ -23,7 +14,7 @@ export const DojoCardComp = () => {
                 </Typography>
                 <Divider sx={{ marginBottom:3 }} />
                 <Typography variant="body2" sx={{ marginBottom:1 }} align='center'>
-                    Edző: <span style={{ fontWeight: 'bold' }} >Dencinger Dávid 3. dan</span>
+                    Fokozat: <span style={{ fontWeight: 'bold' }} >8. kyu</span>
                     <br />
                 </Typography>
                 <Typography variant="body2" sx={{ marginBottom:1 }} align='center'>
@@ -43,6 +34,7 @@ export const DojoCardComp = () => {
         <Button size="small">Learn More</Button>
       </CardActions> */}
         </Card>
-
-    )
+  )
 }
+
+export default MemberCardComp
