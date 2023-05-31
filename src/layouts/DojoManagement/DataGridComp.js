@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography, Box, Button, Grid } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid';
-import './../DojoMemberPage/local.css'
+import './../DojoManagement/local.css'
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 90 },

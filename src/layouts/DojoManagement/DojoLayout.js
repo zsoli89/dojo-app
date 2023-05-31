@@ -3,8 +3,8 @@ import {  Grid, List, ListItemButton, ListItemIcon, ListItemText, Divider } from
 import { DojoCardComp } from './DojoCardComp';
 import { DojoContent } from './DojoContent';
 import DojoBlogComp from './DojoBlogComp';
-import DataGridComp from './DojoMemberPage/DataGridComp';
 import TestCarouselComp from '../Homepage/TestCarouselComp';
+import DataGridComp from './DataGridComp';
 
 const DojoLayout = () => {
 
