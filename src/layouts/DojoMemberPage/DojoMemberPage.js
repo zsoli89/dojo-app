@@ -72,7 +72,7 @@ const DojoMemberPage = () => {
                 </List>
             </Grid>
             {/*sx={{ marginTop: 0.5, bgcolor: 'rgba(243, 236, 250, 0.8)', height: '650px' }} */}
-            <Grid item xs={9.8} >
+            <Grid item xs={9.8} sx={{ bgcolor: 'rgba(243, 236, 250, 0.8)' }}>
                 {personalDataOpen && <PersonalData />}
                 {addressOpen && <Address />}
                 {contactOpen && <Contact />}

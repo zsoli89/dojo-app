@@ -14,15 +14,11 @@ const MemberCardComp = () => {
                 </Typography>
                 <Divider sx={{ marginBottom:3 }} />
                 <Typography variant="body2" sx={{ marginBottom:1 }} align='center'>
-                    Fokozat: <span style={{ fontWeight: 'bold' }} >8. kyu</span>
+                    Azonosító: <span style={{ fontWeight: 'bold' }} >163</span>
                     <br />
                 </Typography>
                 <Typography variant="body2" sx={{ marginBottom:1 }} align='center'>
-                    Tagok száma: <span style={{ fontWeight: 'bold' }} >13</span>
-                    <br />
-                </Typography>
-                <Typography variant="body2" sx={{ marginBottom:2 }} gutterBottom align='center'>
-                    Web: <span style={{ fontWeight: 'bold' }} ><a href='https://google.hu'>https://matrakempose.hu</a></span>
+                    Fokozat: <span style={{ fontWeight: 'bold' }} >8. kyu</span>
                     <br />
                 </Typography>
                 {/* <Typography align='center'>
